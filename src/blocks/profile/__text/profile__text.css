@@ -1,0 +1,17 @@
+.profile__text {
+  margin: 0 30px;
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  gap: 16px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__text {
+    gap: 7px;
+    margin: 0 auto;
+    margin-top: 26px;
+    min-width: 282px;
+  }
+}

@@ -1,0 +1,18 @@
+.content__profile {
+  margin: 40px auto 51px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 879px) {
+  .content__profile {
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content__profile {
+    margin-top: 42px;
+    margin-bottom: 26px;
+  }
+}

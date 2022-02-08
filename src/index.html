@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Место">
+  <meta name="keywords" content="Проект Место, Яндекс Практикум">
+  <meta name="author" content="Алексей Зайцев">
+  <title>Место</title>
+</head>
+<body class="root">
+  <!-- page -->
+  <div class="page centered-block">
+    <!-- header -->
+    <header class="header">
+      <a href="/"><img src="<%=require('./images/logo.svg')%>" alt="Место" class="header__logo"></a>
+    </header>
+    <!-- end header -->
+    <!-- main -->
+    <main class="content">
+      <!-- profile -->
+      <section class="profile content__profile">
+        <div class="profile__avatar-wraper">
+          <img src="https://www.internetgunclub.com/images/default-profile.jpg" alt="аватар" class="profile__avatar">
+          <button class="profile__avatar-cover" type="button"></button>
+        </div>
+        <div class="profile__text">
+          <div class="profile__name-edit">
+            <h1 class="profile__name"></h1>
+            <button class="profile__edit-button" type="button"></button>
+          </div>
+          <p class="profile__description"></p>
+        </div>
+        <button class="profile__add-button" type="button"></button>
+      </section>
+      <!-- end profile -->
+      <!-- photo-grid  -->
+      <section class="photo-grid content__photo-grid">
+        <ul class="photo-grid__items">
+        </ul>
+      </section>
+      <!-- end photo-grid  -->
+    </main>
+    <!-- end main -->
+    <!-- footer -->
+    <footer class="footer page__footer">
+      <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
+    </footer>
+    <!-- end footer -->
+  </div>
+  <!-- end page -->
+  <!-- popup profileEdit -->
+  <section class="popup root__popup popup_type_profile-edit">
+    <div class="popup__container">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form name="profile-edit" action="#" class="popup__form popup__form_type_profile-edit">
+        <section class="popup__form-section">
+          <input type="text" name="names" class="popup__input-text popup__input_profile_name" placeholder="Имя" minlength="2" maxlength="40" required>
+          <span class="popup__input-text-error"></span>
+        </section>
+        <section class="popup__form-section">
+          <input type="text" name="description" class="popup__input-text popup__input_profile_description" placeholder="О себе" minlength="2" maxlength="200" required>
+          <span class="popup__input-text-error"></span>
+        </section>
+        <button class="popup__button-submit" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__button-close" type="button"></button>
+    </div>
+  </section>
+  <!-- end popup profileEdit -->
+  <!-- popup avatarEdit -->
+  <section class="popup root__popup popup_type_avatar-edit">
+    <div class="popup__container">
+      <h2 class="popup__title">Обновить аватар</h2>
+      <form name="avatar-edit" action="#" class="popup__form popup__form_type_avatar-edit">
+        <section class="popup__form-section">
+          <input type="url" name="avatar" class="popup__input-text popup__input_avatar" placeholder="Ссылка на аватар" required>
+          <span class="popup__input-text-error"></span>
+        </section>
+        <button class="popup__button-submit" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__button-close" type="button"></button>
+    </div>
+  </section>
+  <!-- end popup avatarEdit -->
+  <!-- popup addPlace -->
+  <section class="popup root__popup popup_type_add-place">
+    <div class="popup__container">
+      <h2 class="popup__title">Новое место</h2>
+      <form name="place-add" action="#" class="popup__form popup__form_type_add-place">
+        <section class="popup__form-section">
+          <input type="text" name="names" class="popup__input-text popup__input_place_name" placeholder="Название" minlength="2" maxlength="30" required>
+          <span class="popup__input-text-error"></span>
+        </section>
+        <section class="popup__form-section">
+          <input type="url" name="link" class="popup__input-text popup__input_place_link" placeholder="Ссылка на картинку" required>
+          <span class="popup__input-text-error"></span>
+        </section>
+        <button class="popup__button-submit" type="submit">Создать</button>
+      </form>
+      <button class="popup__button-close" type="button"></button>
+    </div>
+  </section>
+  <!-- end popup addPlace -->
+  <!-- popup img -->
+  <section class="popup root__popup popup_type_view">
+    <div class="popup__container popup__container_type_view">
+      <figure class="popup__figure">
+        <img class="popup__image" src="" alt="">
+        <figcaption class="popup__caption"></figcaption>
+      </figure>
+      <button class="popup__button-close" type="button"></button>
+    </div>
+  </section>
+  <!-- end popup img -->
+  <!-- popup confirm -->
+  <section class="popup root__popup popup_type_confirm">
+    <div class="popup__container">
+      <h2 class="popup__title">Вы уверены?</h2>
+      <button class="popup__button-submit popup__button-submit_type_confirm" type="button">Да</button>
+      <button class="popup__button-close" type="button"></button>
+    </div>
+  </section>
+  <!-- end popup confirm -->
+  <!-- card__template -->
+  <template  class="card__template">
+    <li class="photo-grid__item">
+      <img src="" alt="" class="photo-grid__image">
+      <button class="photo-grid__delete-button" type="button"></button>
+      <div class="photo-grid__image-caption">
+        <p class="photo-grid__image-title"></p>
+        <div class="photo-grid__like-wraper">
+          <button class="photo-grid__like-button" type="button"></button>
+          <p class="photo-grid__count-like">0</p>
+        </div>
+      </div>
+    </li>
+  </template>
+  <!-- end card__template -->
+</body>
+</html>

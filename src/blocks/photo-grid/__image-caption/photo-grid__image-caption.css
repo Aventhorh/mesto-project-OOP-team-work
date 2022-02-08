@@ -1,0 +1,8 @@
+.photo-grid__image-caption {
+  display: grid;
+  grid-template-columns: 1fr 22px;
+  column-gap: 5px;
+  justify-content: space-between;
+  margin: 22px 20px 0 21px;
+  box-sizing: border-box;
+}

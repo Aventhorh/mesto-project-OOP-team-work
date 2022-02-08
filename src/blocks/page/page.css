@@ -1,0 +1,13 @@
+.page {
+  max-width: 880px;
+  min-width: 320px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 120px 1fr 168px;
+}
+
+@media screen and (max-width: 767px) {
+  .page {
+    grid-template-rows: 87px 1fr 130px;
+  }
+}
